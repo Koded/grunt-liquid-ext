@@ -2,7 +2,7 @@
 
 Provides custom extensions for [grunt-liquid](https://github.com/sirlantis/grunt-liquid).  This is a replacement for the fork I did [https://github.com/Koded/grunt-liquid](https://github.com/Koded/grunt-liquid) and allows for easier extensions.
 
-Only mean for internal use.  Use: [grunt-liquid](https://github.com/sirlantis/grunt-liquid).
+Only meant for internal use.  Use: [grunt-liquid](https://github.com/sirlantis/grunt-liquid).
 
 ## Examples
 
