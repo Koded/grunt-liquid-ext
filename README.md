@@ -59,3 +59,27 @@ grunt.registerTask('setvars', 'Set variables for Liquid.', function() {
   });
 });
 ```
+
+```
+
+module.exports = function(grunt) {
+
+  grunt.initConfig({
+    language: 'es',
+  });
+
+  grunt.task.registerTask('language', 'Sets the language for the current build.', function(arg1, arg2) {
+    var language = grunt.option('language') || grunt.config('language');
+
+    var languageStrings = grunt.file.readYAML(__dirname + '/languages/' + language + '.yaml');
+    grunt.config.set('liquid_cx.options.language', languageStrings);
+
+  });
+};
+```
+
+Or:
+
+```
+grunt build --language=es
+```
