@@ -39,7 +39,8 @@ module.exports = function (grunt) {
 
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
-            includes: ''
+            includes: '',
+            defaultLayout: 'layout'
         });
 
         registerFilters(this.options());
@@ -53,7 +54,7 @@ module.exports = function (grunt) {
             var ext = path.extname(srcFiles);
             var dir = path.dirname(fp.src);
 
-            content = '{% layout layout %}' + content;
+            content = '{% layout ' + options.defaultLayout + ' %}' + content;
 
             var parsePromise = Liquid.Template.extParse(content, function (subFilepath, cb) {
                 console.log(path.join(options.includes, subFilepath + ext));
